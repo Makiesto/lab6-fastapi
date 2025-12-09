@@ -13,7 +13,7 @@ jobs:
       run: |
         echo "OWNER_LC=${OWNER,,}" >> $GITHUB_ENV
       env:
-        OWNER: ${{ github.Makiesto }}
+        OWNER: ${{ github.repository_owner  }}
 
     - uses: actions/checkout@v4
     - name: Login to GHCR
