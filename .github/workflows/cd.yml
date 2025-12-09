@@ -6,7 +6,7 @@ on:
 jobs:
   docker-deploy:
     runs-on: ubuntu-latest
-    steps:
+      steps:
       - name: set lower case owner name
       run: |
         echo "OWNER_LC=${OWNER,,}" >>${GITHUB_ENV}
