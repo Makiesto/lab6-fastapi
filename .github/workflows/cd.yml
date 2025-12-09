@@ -23,4 +23,5 @@ jobs:
       - name: Build and push
         run: |
           docker build -t ghcr.io/$OWNER_LC/python-app:latest .
+          docker tag $IMAGE:latest $IMAGE:${{ github.sha }}
           docker push ghcr.io/$OWNER_LC/python-app:latest
